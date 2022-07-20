@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import BarraNav from './components/BarraNav/BarraNav';
 
 function App() {
   return (
     <div className="App">
+    <BarraNav />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,6 +20,9 @@ function App() {
           Learn React 
         </a>
       </header>
+
+      
+
     </div>
   );
 }
