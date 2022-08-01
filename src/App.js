@@ -1,15 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import BarraNav from './components/BarraNav/BarraNav';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemCount from './components/ItemCount/ItemCount';
 
 function App() {
   return (
     <div className="App">
     <BarraNav />
-    <ItemListContainer nombre='Diego Maradona' />
-    <ItemListContainer nombre='Claudia Villafañe' />
-        
+    <ItemCount />
+            
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

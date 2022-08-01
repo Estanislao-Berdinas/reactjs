@@ -1,0 +1,20 @@
+.caja {
+    display: inline;
+    border-style: 5px solid;
+}
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+  
+}
+
+.boton p {
+    width: 50px;
+    padding-top: 17px;
+}
+
+.carrito {
+    display: block;
+}
