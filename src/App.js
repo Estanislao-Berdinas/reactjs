@@ -2,12 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 import BarraNav from './components/BarraNav/BarraNav';
 import ItemCount from './components/ItemCount/ItemCount';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
+
+ 
   return (
     <div className="App">
     <BarraNav />
-    <ItemCount />
+    {/* <ItemCount /> */}
+    <ItemListContainer />
             
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
