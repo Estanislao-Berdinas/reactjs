@@ -1,18 +1,21 @@
-import data from "../Item/Item"
- 
-     
-    const productos = new Promise ((resolve, reject) => {
-        let pedido=true
-        if (pedido) {
-            setTimeout(()=> {
-                resolve (data)
-            }, 2000)
-        }
-        else {
-            reject(console.log ("No hay pedido"))
-        }
+import Item from "../Item/Item";
+import './ItemList.css'
+
+function ItemList ({producto}) {
+    return (
+        <div className="itemList">
+         {producto.map(prod =>{ 
+            return (
+                    <div key={prod.id}>
+                <Item  
+                    imagen={prod.img}
+                    nombre={prod.nombre}
+                    precio={prod.precio} /> 
+                    </div>
+            )})}    
+    </div> 
+)
     
-    })
+}
 
-
-export default productos;
+export default ItemList;

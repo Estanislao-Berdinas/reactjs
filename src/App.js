@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import BarraNav from './components/BarraNav/BarraNav';
-import ItemCount from './components/ItemCount/ItemCount';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {

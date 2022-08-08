@@ -1,47 +1,19 @@
- 
-const data = [{
-        "id": 1,
-        "nombre": "Huertero",
-        "img": "../Image/ofertas1.jpeg",
-        "precio": 5000
-    },
-    
-    {
-        "id": 2,
-        "nombre": "Macetero",
-        "img": "../Image/ofertas3.jpeg",
-        "precio": 3000
-    },
-    
-    {
-        "id": 3,
-        "nombre": "Portafoco",
-        "img": "../Image/ofertas5.jpeg",
-        "precio": 2500
-    },
-    
-    {
-        "id": 4,
-        "nombre": "Tabla",
-        "img": "../Image/categoriahogar2.jpeg",
-        "precio": 2000
-    },
-    
-    {
-        "id": 5,
-        "nombre": "Mesa",
-        "img": "../Image/novedades1.jpeg",
-        "precio": 8000
-    },
-    
-    {
-        "id": 6,
-        "nombre": "Espejo",
-        "img": "../Image/categoriadeco3.jpeg" ,
-        "precio": 3200
-        
-    }
-    ]
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
-   
-export default data;  
+function Item (props) {
+
+return (
+    <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={props.imagen} />
+          <Card.Body>
+            <Card.Title>{props.nombre}</Card.Title>
+                <Card.Text> $ {props.precio} </Card.Text>
+                    <Button variant="primary">Comprar</Button>
+         </Card.Body>
+    </Card>
+)
+
+}
+
+export default Item;
