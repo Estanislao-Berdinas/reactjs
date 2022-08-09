@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import BarraNav from './components/BarraNav/BarraNav';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailsContainer from './components/ItemDetailsContainer/ItemDetailsContainer';
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
     <BarraNav />
     {/* <ItemCount /> */}
-    <ItemListContainer />
+    <ItemDetailsContainer />
             
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

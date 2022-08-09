@@ -68,7 +68,7 @@ const data = [{
     {
         "codigo": 7,
         "nombre": "Mesita Ratona",
-        "img": "./images/categoriahogar1.jpeg" ,
+        "img": "../Image/categoriahogar1.jpeg" ,
         "precio": 4000,
         "stock": 2,
         "descrip": "Embellecé el living"
@@ -78,7 +78,7 @@ const data = [{
     {
         "codigo": 8,
         "nombre": "Perchero",
-        "img": "./images/categoriadeco1.jpeg" ,
+        "img": "../Image/categoriadeco1.jpeg" ,
         "precio": 3800,
         "stock": 5,
         "descrip":"Estilo Nórdico"
@@ -88,7 +88,7 @@ const data = [{
     {
         "codigo": 9,
         "nombre": "Baúl",
-        "img": "./images/novedades4.jpeg" ,
+        "img": "../Image/novedades4.jpeg" ,
         "precio": 3400,
         "stock": 3,
         "descrip": "Optimizá tus lugares"
