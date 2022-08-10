@@ -1,4 +1,4 @@
-import productos from '../Data/Data'
+import { productos } from '../Data/Data'
 import { useEffect, useState } from 'react';
 import ItemDetails from '../ItemDetails/ItemDetails';
 
