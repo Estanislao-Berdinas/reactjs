@@ -1,4 +1,4 @@
-.itemList {
+.itemDetails {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -7,7 +7,7 @@
     margin: auto
 }
 
-.itemList img {
+.itemDetails img {
     width: 100%;
     height: 380px;
     padding-top: 15px;

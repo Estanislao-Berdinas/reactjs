@@ -1,9 +1,10 @@
 import Item from "../Item/Item";
+import './ItemDetails.css'
 
 
 function ItemDetails ({producto}) {
     return (
-        <div className="itemList">
+        <div className="itemDetails">
          {producto.map(prod =>{ 
             return (
                     <div key={prod.id}>

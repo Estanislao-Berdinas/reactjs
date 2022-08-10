@@ -1,13 +1,9 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-
+import { Link } from 'react-router-dom'
 
  const cargarProducto = (props)=>{ 
-        return (<>
-            <Card.Text> $ {props.precio} </Card.Text>
-            <Card.Text> Descripción: {props.descripcion} </Card.Text>
-            <Card.Text> Stock: {props.stock} </Card.Text>
-            </>
+        return ( console.log (props.id)
 
         )
     }
@@ -22,10 +18,10 @@ function Item(props) {
         <Card.Img variant="top" src={props.imagen} />
           <Card.Body>
             <Card.Title>{props.nombre}</Card.Title>
-            <Card.Text> $ {props.precio} </Card.Text>
+            {/* <Card.Text> $ {props.precio} </Card.Text>
             <Card.Text> Descripción: {props.descripcion} </Card.Text>
-            <Card.Text> Stock: {props.stock} </Card.Text>
-                <Button onClick={cargarProducto} variant="primary">Comprar</Button>
+            <Card.Text> Stock disponible (en cantidad): {props.stock} </Card.Text> */}
+                <Link to={`/detalles/${props.nombre}`}><Button variant="primary">Ver mas información del producto</Button></Link>
          </Card.Body>
     </Card>
     )
