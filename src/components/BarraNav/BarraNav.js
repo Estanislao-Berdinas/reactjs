@@ -11,7 +11,7 @@ function BarraNav () {
     
         <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="#home"> <img className='logo' src="../Image/raisonlogo.jpg" alt="Raison Logo"/> </Navbar.Brand>
+          <Navbar.Brand as={Link} to='/'> <img className='logo' src="../Image/raisonlogo.jpg" alt="Raison Logo"/> </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">

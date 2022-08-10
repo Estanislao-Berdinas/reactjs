@@ -11,6 +11,11 @@
     display: none;
 }
 
+.tarjeta {
+    display: contents;
+    margin: auto;
+}
+
 .tipo-letra {
     font-weight: bold;
 }

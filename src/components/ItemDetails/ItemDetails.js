@@ -13,8 +13,9 @@ function ItemDetails ({producto}) {
                     imagen={prod.img}
                     nombre={prod.nombre}
                      /> 
+                     <br/>
                      <Card>
-                        <Card.Body>
+                        <Card.Body className="tarjeta">
                             <Card.Text className="tipo-letra"> Precio: $ {prod.precio} </Card.Text>
                             <Card.Text className="tipo-letra"> Descripción: {prod.descrip} </Card.Text>
                             <Card.Text className="tipo-letra"> Stock disponible: {prod.stock} </Card.Text>
@@ -28,3 +29,5 @@ function ItemDetails ({producto}) {
 }
 
 export default ItemDetails;
+
+
