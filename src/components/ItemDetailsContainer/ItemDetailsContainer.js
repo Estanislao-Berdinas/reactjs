@@ -1,21 +1,24 @@
-import { productos } from '../Data/Data'
+import { ProductosId } from '../Data/Data'
 import { useEffect, useState } from 'react';
 import ItemDetails from '../ItemDetails/ItemDetails';
+import { useParams } from 'react-router-dom'
 
 function ItemDetailsContainer () {
     const [producto, setProducto] = useState([]);
+    const { ProductoId } = useParams ();
     
     useEffect (()=>{
-        productos
+        ProductosId (ProductoId)
         .then((dato)=> setProducto(dato))
         .catch(err=> console.log (err))
         
-    }, [])
+    }, [ProductoId])
 
     return (
-        <div className='cajaProductos'>
-        <ItemDetails producto={producto} />
-        </div>
+        <>
+        <h1>Información del Producto</h1>
+        <ItemDetails producto={producto}/>
+        </>
 
     )
   
