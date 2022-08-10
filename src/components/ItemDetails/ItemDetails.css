@@ -1,8 +1,14 @@
 .itemDetails {
     display: inline;
     
-    
 }
+.itemDetails button {
+   width: 400px;
+  background-color:#0d6efd;
+  display: flex;
+  justify-content: center;
+}
+
 .itemM{
     display: inline-block;
 }
@@ -29,3 +35,4 @@
     padding-top: 15px;
     object-fit: cover;
 }
+

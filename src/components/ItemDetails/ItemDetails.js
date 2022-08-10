@@ -1,6 +1,8 @@
 import Item from "../Item/Item";
 import './ItemDetails.css'
 import Card from 'react-bootstrap/Card';
+import {Link} from 'react-router-dom'
+import Button from 'react-bootstrap/Button';
 
 
 function ItemDetails ({producto}) {
@@ -9,7 +11,7 @@ function ItemDetails ({producto}) {
          {producto.map(prod =>{ 
             return (
                     <div className="itemM" key={prod.id}>
-                <Item  
+                    <Item  
                     imagen={prod.img}
                     nombre={prod.nombre}
                      /> 
@@ -22,8 +24,16 @@ function ItemDetails ({producto}) {
                         </Card.Body>
                     </Card>
                     </div>
+                                   
+                        
             )})}    
-    </div> 
+         <>
+         <Link to='/'><Button variant="primary">Volver a Inicio</Button></Link>
+         </>   
+        </div> 
+    
+    
+
 )
     
 }
