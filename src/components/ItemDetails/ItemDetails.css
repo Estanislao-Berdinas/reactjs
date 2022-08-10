@@ -14,10 +14,13 @@
 .tarjeta {
     display: contents;
     margin: auto;
+    
 }
 
 .tipo-letra {
     font-weight: bold;
+    background-color: #0d6efd;
+    color: white;
 }
 
 .itemDetails img {
