@@ -1,14 +1,22 @@
 .itemDetails {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 15px;
-    width: 80%;
-    margin: auto
+    display: inline;
+    
+    
+}
+.itemM{
+    display: inline-block;
+}
+
+.itemM button {
+    display: none;
+}
+
+.tipo-letra {
+    font-weight: bold;
 }
 
 .itemDetails img {
-    width: 100%;
+    width: auto;
     height: 380px;
     padding-top: 15px;
     object-fit: cover;

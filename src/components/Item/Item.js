@@ -2,11 +2,11 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom'
 
- const cargarProducto = (props)=>{ 
-        return ( console.log (props.id)
+//  const cargarProducto = (props)=>{ 
+//         return ( console.log (props.id)
 
-        )
-    }
+//         )
+//     }
 
 
 
