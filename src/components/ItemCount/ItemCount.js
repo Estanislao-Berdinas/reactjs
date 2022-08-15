@@ -2,44 +2,43 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import './ItemCount.css';
 
-function ItemCount () {
+function ItemCount ({agregarAlCarrito, stock}) {
 
     const [contador, setContador] = useState (1);
 
-    const stock = 5;
-
-     function sumaContador () {
-        setContador (contador + 1);
+    const onAdd = () => {
+      agregarAlCarrito(contador)
+    }
+      
+    const sumaContador = () => {
+       if (contador < stock) {
+        setContador(contador + 1);
+       }
         
     }
 
-    function restaContador () {
-        setContador (contador - 1);
-           
-        }
-
-    function alerta () {
-        alert('Producto agregado');
-        
+    const restaContador = () => {
+        if (contador > 1) {
+          setContador (contador - 1);
+          }
     }
     
     return (
+      
                 
     <div className='caja'>
-    <h2> Huerteros a comprar</h2> 
-        <div className='boton'>
+      <div className='boton'>
         <Button onClick={restaContador} variant="primary" size="sm">
           -
         </Button>
-        
-        <p> {contador < 1 ? null : contador > stock ? null : contador} </p>
+        {contador}        
         <Button onClick={sumaContador} variant="primary" size="sm">
           +
         </Button>
         </div>
-       
+        <br/>
         <div className='carrito'>
-        <Button onClick={alerta}  variant="primary" size="lg">
+        <Button onClick={onAdd}  variant="primary" size="lg">
           Agregar al Carrito 
         </Button>
         </div>
@@ -48,4 +47,4 @@ function ItemCount () {
 )
 }
 
-export default ItemCount;
+export default ItemCount ;
