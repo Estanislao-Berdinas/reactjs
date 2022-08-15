@@ -13,10 +13,12 @@
     display: inline-block;
 }
 
-.itemM button {
+.noVer button {
     display: none;
 }
-
+.card {
+    width: auto !important;
+}
 .tarjeta {
     display: contents;
     margin: auto;
