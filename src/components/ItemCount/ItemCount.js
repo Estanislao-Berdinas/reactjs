@@ -1,10 +1,17 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import './ItemCount.css';
+import { CartContext } from '../../Context/CartContext';
 
 function ItemCount ({agregarAlCarrito, stock}) {
 
     const [contador, setContador] = useState (1);
+
+    //  const { sumaCarro } = useContext (CartContext)
+
+    // tareas para continuar -> crear carro, con modales sumas y restas
+    // terminar de aplicar propiedades prolijas al css y darle mejor formato
+    // agregar en itemdetails un boton para volver luego de agregarlo al carrito y otro aca para volver al catalogo principal
 
     const onAdd = () => {
       agregarAlCarrito(contador)

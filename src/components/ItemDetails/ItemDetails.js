@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 
 
+
 function ItemDetails ({producto}) {
 
     const [productoAgregadoAlCarrito, setproductoAgregadoAlCarrito] = useState(false);
@@ -18,6 +19,8 @@ function ItemDetails ({producto}) {
         );
         setproductoAgregadoAlCarrito(true);
     };
+
+   
 
 
     return (
@@ -41,7 +44,7 @@ function ItemDetails ({producto}) {
                         </Card.Body>
                     </Card>
                     <br/><br/>
-                    {productoAgregadoAlCarrito ? <Link to={`/cart`} >Producto agregado con éxito, chequeá tu carrito!</Link> : (
+                    {productoAgregadoAlCarrito ? <Link to={`/carro`} >Producto agregado con éxito, chequeá tu carrito!</Link> : (
                         <div className="agregarCarrito"> 
                         <ItemCount
                         agregarAlCarrito={onAdd}

@@ -3,9 +3,12 @@ import { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList';
 import {useParams} from 'react-router-dom'
 
+
 function ItemListContainer ({item}) {
     const [producto, setProducto] = useState([]);
-    const { categoriaId } = useParams()
+    const { categoriaId } = useParams();
+
+ 
     
     useEffect (()=>{
                 
