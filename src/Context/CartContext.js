@@ -1,8 +1,7 @@
-import React, {useContext} from "react";
+import { createContext } from 'react';
 
-const ThemeContext = React.createContext();
+export const CartContext = createContext();
 
-function CartContext () {
-    const probando = useContext (ThemeContext)
-    return <p> Probando: {probando}</p>
-}
+
+    
+
