@@ -1,15 +1,15 @@
-import './App.css';
 import BarraNav from './components/BarraNav/BarraNav';
 import {Routes, Route } from 'react-router-dom';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailsContainer from './components/ItemDetailsContainer/ItemDetailsContainer';
 import CartWidget from './components/CartWidget/CartWidget';
+import CartContextProvider from './Context/CartContext';
 
 
 function App() {
  
   return (
-    <div className="App">
+    <CartContextProvider>
 
       <BarraNav />
      
@@ -21,7 +21,7 @@ function App() {
       </Routes> 
             
 
-    </div>
+    </CartContextProvider>
   );
 }
 
