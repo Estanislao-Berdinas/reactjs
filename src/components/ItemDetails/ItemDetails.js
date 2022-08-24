@@ -2,15 +2,15 @@ import Item from "../Item/Item";
 import './ItemDetails.css'
 import Card from 'react-bootstrap/Card';
 import ItemCount from "../ItemCount/ItemCount";
-import { useState } from 'react';
+import React, { useState} from 'react';
 import { Link } from "react-router-dom";
-
-
-
+import { useCartContext } from '../../Context/CartContext'
 
 function ItemDetails ({producto}) {
 
     const [productoAgregadoAlCarrito, setproductoAgregadoAlCarrito] = useState(false);
+
+    const { sumaCarro } = useCartContext();
     const onAdd = (cantidadToAdd) => {
 
         
@@ -18,6 +18,8 @@ function ItemDetails ({producto}) {
             cantidadToAdd
         );
         setproductoAgregadoAlCarrito(true);
+        sumaCarro(producto, cantidadToAdd);
+        console.log(sumaCarro)
     };
 
    

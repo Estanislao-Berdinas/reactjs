@@ -1,10 +1,6 @@
-import React, {useContext} from 'react';
 import Carrito from '../Image/carrito.png'
 import './CartWidget.css'
-import {CartContext} from '../../Context/CartContext'
 import Badge from 'react-bootstrap/Badge';
-import ListGroup from 'react-bootstrap/ListGroup';
-
 
 
 function CartWidget ({producto}) {
