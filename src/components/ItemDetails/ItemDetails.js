@@ -10,7 +10,7 @@ function ItemDetails ({producto}) {
 
     const [productoAgregadoAlCarrito, setproductoAgregadoAlCarrito] = useState(false);
 
-    const { sumaCarro } = useCartContext();
+    const {sumaCarro} = useCartContext();
     const onAdd = (cantidadToAdd) => {
 
         

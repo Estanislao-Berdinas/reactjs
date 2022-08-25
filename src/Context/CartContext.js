@@ -6,26 +6,23 @@ export const useCartContext = () => useContext(CartContext);
 const CartProvider = ({children}) => {
     const [carro, setCarro] = useState([]);
 
-    const productoCarro = (id) => carro.find(product =>product.id === id) ? true : false;
+    
 
-    const sumaCarro = ({producto, cantidad}) => {
+    const sumaCarro = (producto, cantidadToAdd) => {
         if (productoCarro(producto.id)) {
-            setCarro(carro.map(product => {
-                return( product.id === producto.id ? {...product, cantidad: product.cantidad + cantidad} : product)
+            setCarro(carro.map(prod => {
+                return( prod.id === producto.id ? {...prod, cantidadToAdd: prod.cantidad + cantidadToAdd} : prod)
             }));
         }else{
-            setCarro([...carro, {...producto, cantidad}]);
+            setCarro([...carro, {...producto, cantidadToAdd}]);
         }}
-    //    setCarro ([...carro, producto]);
-    // }
-
+   
     const borraCarro = () => setCarro ([]);
 
-    
-    
-    const borraProducto = (id) => setCarro(carro.filter(product => product.id !== id));
+    const productoCarro = (id) => carro.find(product =>product.id === id) ? true : false;
 
-    
+    const borraProducto = (id) => setCarro(carro.filter(product => product.id !== id));
+   
 
     return (
         <CartContext.Provider value={{sumaCarro, borraCarro, productoCarro, borraProducto}}> {children} </CartContext.Provider>
