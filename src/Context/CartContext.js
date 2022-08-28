@@ -6,12 +6,12 @@ export const useCartContext = () => useContext(CartContext);
 const CartProvider = ({children}) => {
     const [carro, setCarro] = useState([]);
 
-    
+    console.log (carro)
 
     const sumaCarro = (producto, cantidadToAdd) => {
         if (productoCarro(producto.id)) {
             setCarro(carro.map(prod => {
-                return( prod.id === producto.id ? {...prod, cantidadToAdd: prod.cantidad + cantidadToAdd} : prod)
+                return( prod.id === producto.id ? {cantidadToAdd: prod.cantidadToAdd + cantidadToAdd} : prod)
             }));
         }else{
             setCarro([...carro, {...producto, cantidadToAdd}]);

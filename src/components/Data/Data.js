@@ -21,7 +21,7 @@ export const productoCategoria = (categoriaId) => {
 export const ProductosId = (ProductoId) => {
     return new Promise ((resolve,reject) => {
         setTimeout (() => {
-            resolve(data.filter(dato=> dato.nombre === ProductoId))
+            resolve(data.find(dato=> dato.nombre === ProductoId))
         },500)
     })
 }
