@@ -22,10 +22,18 @@ const CartProvider = ({children}) => {
     const productoCarro = (id) => carro.find(product =>product.id === id) ? true : false;
 
     const borraProducto = (id) => setCarro(carro.filter(product => product.id !== id));
+
+    const precioTotal = () => {
+        return carro.reduce ((prev,act) => prev + act.cantidadToAdd * act.precio,0);
+        
+     }
+
+    const productosTotal = () => carro.reduce ((sumados, productoElegido) => sumados + productoElegido.cantidadToAdd, 0);
    
 
     return (
-        <CartContext.Provider value={{sumaCarro, borraCarro, productoCarro, borraProducto}}> {children} </CartContext.Provider>
+        <CartContext.Provider value={{sumaCarro, borraCarro, productoCarro, borraProducto, precioTotal, productosTotal, carro
+        }}> {children} </CartContext.Provider>
     )
 }
 
