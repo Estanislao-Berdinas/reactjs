@@ -15,7 +15,7 @@ function Item(props) {
 
     return (
     <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={props.imagen} />
+        <Card.Img variant="top" src={props.img} />
           <Card.Body>
             <Card.Title>{props.nombre}</Card.Title>
             <Link to={`/detalles/${props.nombre}`}><Button variant="primary">Ver mas información del producto</Button></Link>
