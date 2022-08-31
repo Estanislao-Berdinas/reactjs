@@ -6,9 +6,14 @@ import CartContextProvider from './Context/CartContext';
 import Carro from './components/Carro/Carro';
 
 
+
+
+
 function App() {
- 
+
+   
   return (
+
     <CartContextProvider>
 
       <BarraNav />

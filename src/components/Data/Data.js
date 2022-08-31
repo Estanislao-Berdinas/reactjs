@@ -1,14 +1,24 @@
+import { collection, getDocs } from 'firebase/firestore';
+import {DB} from './DataFirebase';
+
 export const productos = new Promise ((resolve, reject) => {
-     let pedido=true
-    if (pedido) {
-        setTimeout(()=> {
-            resolve (data)
-        }, 2000)
-    }
-    else {
-        reject(console.log ("No hay pedido"))
-    }
-    })
+    const colRef = collection(DB,'productos');
+    getDocs(colRef).then((snapshot) => {
+        
+        const productosConFormato = snapshot.docs.map((rawDoc) => {
+            return {
+                id: rawDoc.id,
+                ...rawDoc.data()
+            }
+
+        });
+
+        resolve(productosConFormato);
+
+    }, (error) => {
+        reject('Error al intentar traer los docs: ', error);
+    });
+});
 
 export const productoCategoria = (categoriaId) => {
     return new Promise ((resolve,reject) => {
