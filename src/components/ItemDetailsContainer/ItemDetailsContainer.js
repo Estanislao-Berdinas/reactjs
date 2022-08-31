@@ -2,17 +2,19 @@ import { ProductosId } from '../Data/Data'
 import { useEffect, useState } from 'react';
 import ItemDetails from '../ItemDetails/ItemDetails';
 import { useParams } from 'react-router-dom'
+import {getFirestore, doc, getDoc} from 'firebase/firestore';
 
 function ItemDetailsContainer () {
     const [producto, setProducto] = useState([]);
     const { ProductoId } = useParams ();
     
     useEffect (()=>{
-        ProductosId (ProductoId)
-        .then((dato)=> setProducto(dato))
-        .catch(err=> console.log (err))
+        const consultaDB = getFirestore()
+        const consultaElement = doc(consultaDB, 'productos', 'bDWkwpMrXIovEjmO10qK' )
+        getDoc(consultaElement)
+        .then(res => setProducto({id: res.id, ...res.data()}))
         
-    }, [ProductoId])
+    }, [])
 
     return (
         <>
