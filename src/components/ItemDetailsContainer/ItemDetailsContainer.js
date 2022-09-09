@@ -10,7 +10,7 @@ function ItemDetailsContainer () {
     
     useEffect (()=>{
         const consultaDB = getFirestore()
-        const consultaElement = doc(consultaDB, 'productos', 'bDWkwpMrXIovEjmO10qK' )
+        const consultaElement = doc(consultaDB, 'productos', ProductoId )
         getDoc(consultaElement)
         .then(res => setProducto({id: res.id, ...res.data()}))
         

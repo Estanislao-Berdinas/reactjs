@@ -10,7 +10,8 @@ function ItemList ({producto}) {
                 <Item  
                     imagen={prod.img}
                     nombre={prod.nombre}
-                    precio={prod.precio} /> 
+                    precio={prod.precio}
+                    id={prod.id} /> 
                     </div>
             )})}    
     </div> 
