@@ -37,11 +37,12 @@ function ItemCount ({agregarAlCarrito, stock}) {
         <Button onClick={restaContador} variant="primary" size="sm">
           -
         </Button>
-        {contador}        
+        <p>{contador}</p>
         <Button onClick={sumaContador} variant="primary" size="sm">
           +
         </Button>
         </div>
+        <br/>
         <br/>
         <div className='carrito'>
         <Button onClick={onAdd}  variant="primary" size="lg">
