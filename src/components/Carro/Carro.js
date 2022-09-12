@@ -47,6 +47,7 @@ const Carro = () => {
         .then(result => alert('Tu compra ha sido confirmada, por favor guardá el código del ticket generado. \n\nOrden ID: ' + result.id ))
         .catch(err => console.log(err)); 
         // (cambiar alert por modal bootsrap) 
+        // dar css correcto
     
   
           
@@ -64,19 +65,19 @@ const Carro = () => {
 
         return(
         <>
-        <form className='checkout'>
+        <form>
 
-            <label className='checkoutLabel'>
+            <label>
             Nombre: <br/>
             <input id='inputNombre' type="text"></input>
             </label>
 
-            <label className='checkoutLabel'>
+            <label>
             Email: <br/>
             <input id='inputEmail' type="email"></input>
             </label>
 
-            <label className='checkoutLabel'>
+            <label>
             Numero: <br/>
             <input id='inputNumero' type="tel"></input>
             </label>
