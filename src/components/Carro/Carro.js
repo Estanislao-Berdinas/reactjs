@@ -1,8 +1,9 @@
 import { doc, setDoc, collection, getFirestore, serverTimestamp } from "firebase/firestore";
-import { Button } from "react-bootstrap";
+import { Button, Col, Form, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../Context/CartContext"
 import ItemCarro from "../ItemCarro/ItemCarro";
+import './Carro.css';
 
 
 const Carro = () => {
@@ -46,8 +47,7 @@ const Carro = () => {
         generaCompra()
         .then(result => alert('Tu compra ha sido confirmada, por favor guardá el código del ticket generado. \n\nOrden ID: ' + result.id ))
         .catch(err => console.log(err)); 
-        // (cambiar alert por modal bootsrap) 
-        // dar css correcto
+       
     
   
           
@@ -65,29 +65,35 @@ const Carro = () => {
 
         return(
         <>
-        <form>
-
-            <label>
-            Nombre: <br/>
-            <input id='inputNombre' type="text"></input>
-            </label>
-
-            <label>
-            Email: <br/>
-            <input id='inputEmail' type="email"></input>
-            </label>
-
-            <label>
-            Numero: <br/>
-            <input id='inputNumero' type="tel"></input>
-            </label>
-            </form>
-
-            {
+         {
                 carro.map(producto =><ItemCarro key={producto.id} producto={producto}/>)
             }
-            <p> Precio total = {precioTotal()}</p>
-            <Button onClick={crearOrden}> Generar compra </Button>
+
+    <Form className="formulario">
+      <Row className="mb-3">
+        <Form.Group as={Col} controlId="formGridEmail">
+          <Form.Label>Email</Form.Label>
+          <Form.Control type="email" placeholder="Ingresá email" id="inputEmail" />
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridName">
+          <Form.Label>Nombre y Apellido</Form.Label>
+          <Form.Control type="name" placeholder="Nombre" id="inputNombre" />
+        </Form.Group>
+      </Row>
+
+      <Form.Group className="mb-3" controlId="formGridPhone">
+        <Form.Label>Teléfono de Contacto</Form.Label>
+        <Form.Control placeholder="Ingresa tu teléfono" id="inputNumero" />
+      </Form.Group>
+    <Button variant="secondary" type="#">
+       Precio total = {precioTotal()}
+      </Button>
+
+      <Button onClick={crearOrden} variant="primary" type="submit">
+        Generar Compra
+      </Button>
+    </Form>
             
         </>
         )

@@ -1,10 +1,11 @@
 .ItemCarro {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    justify-content: center;
     gap: 15px;
     width: 80%;
-    margin: auto
+    margin: auto;
+    flex-direction: row;
 }
 
 .ItemCarro img{
