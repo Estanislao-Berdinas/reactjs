@@ -10,7 +10,8 @@ function ItemListContainer ({item}) {
     const [producto, setProducto] = useState([]);
     const { categoriaId } = useParams();
 
- 
+ console.log (productos)
+ console.log (productoCategoria)
     
     useEffect (()=>{
 
@@ -19,6 +20,7 @@ function ItemListContainer ({item}) {
         if (categoriaId) { 
             const queryFilter = query(queryCollection, where('categoria', '==', categoriaId))
             getDocs(queryFilter)
+            
             .then(res => setProducto(res.docs.map(producto => ({ id: producto.id, ...producto.data()}))))        
         } else {
             getDocs(queryCollection)

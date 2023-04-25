@@ -39,7 +39,7 @@ export const ProductosId = (ProductoId) => {
     
 
 const data = [{
-        "id": "1",
+        "id": "0",
         "nombre": "Huertero",
         "img": "../Image/ofertas1.jpeg",
         "precio": 5000,
@@ -49,7 +49,7 @@ const data = [{
     },
     
     {
-        "id": "2",
+        "id": "1",
         "nombre": "Macetero",
         "img": "../Image/ofertas3.jpeg",
         "precio": 3000,
@@ -59,7 +59,7 @@ const data = [{
     },
     
     {
-        "id": "3",
+        "id": "2",
         "nombre": "Portafoco",
         "img": "../Image/ofertas5.jpeg",
         "precio": 2500,
@@ -69,7 +69,7 @@ const data = [{
     },
     
     {
-        "id": "4",
+        "id": "3",
         "nombre": "Tabla",
         "img": "../Image/categoriahogar2.jpeg",
         "precio": 2000,
@@ -79,7 +79,7 @@ const data = [{
     },
     
     {
-        "id": "5",
+        "id": "4",
         "nombre": "Mesa",
         "img": "../Image/novedades1.jpeg",
         "precio": 8000,
@@ -89,7 +89,7 @@ const data = [{
     },
     
     {
-        "id": "6",
+        "id": "5",
         "nombre": "Espejo",
         "img": "../Image/categoriadeco3.jpeg" ,
         "precio": 3200,
@@ -100,7 +100,7 @@ const data = [{
     },
 
     {
-        "codigo": "7",
+        "id": "6",
         "nombre": "Mesita Ratona",
         "img": "../Image/categoriahogar1.jpeg" ,
         "precio": 4000,
@@ -111,7 +111,7 @@ const data = [{
     },
     
     {
-        "codigo": "8",
+        "id": "7",
         "nombre": "Perchero",
         "img": "../Image/categoriadeco1.jpeg" ,
         "precio": 3800,
@@ -122,7 +122,7 @@ const data = [{
     },
     
     {
-        "codigo": "9",
+        "id": "8",
         "nombre": "Baúl",
         "img": "../Image/novedades4.jpeg" ,
         "precio": 3400,

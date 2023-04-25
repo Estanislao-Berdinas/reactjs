@@ -9,11 +9,13 @@ function ItemDetailsContainer () {
     
     useEffect (()=>{
         const consultaDB = getFirestore()
-        const consultaElement = doc(consultaDB, 'productos', ProductoId )
+        const consultaElement = doc(consultaDB, 'productos', ProductoId)
         getDoc(consultaElement)
         .then(res => setProducto({id: res.id, ...res.data()}))
-    
-    },[])
+        
+    // eslint-disable-next-line react-hooks/exhaustive-deps 
+    }
+    ,[]) 
 
     return (
         <>
