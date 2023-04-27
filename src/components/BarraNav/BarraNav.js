@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from '../CartWidget/CartWidget';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 import './BarraNav.css'
 
 function BarraNav () {
@@ -16,6 +16,7 @@ function BarraNav () {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link as={Link} to='/'>Inicio</Nav.Link>
+              <Nav.Link as={Link} to= 'tienda'>Tienda</Nav.Link>
               <NavDropdown title="Categorias" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to= 'categoria/ofertas' >Ofertas</NavDropdown.Item>
               <NavDropdown.Item as={Link} to= 'categoria/hogar'>

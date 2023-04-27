@@ -2,12 +2,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-evenly;
-    gap: 15px;
+    gap: 79px;
 }
 
 .itemList img {
-    width: 100%;
-    height: 380px;
-    padding-top: 15px;
+    width: 387px;
+    height: 704px;
+    /* padding-top: 79px; */
     object-fit: cover;
 }

@@ -1,0 +1,6 @@
+.home img {
+    width: 387px;
+    height: 704px;
+    /* padding-top: 79px; */
+    object-fit: cover;
+}
