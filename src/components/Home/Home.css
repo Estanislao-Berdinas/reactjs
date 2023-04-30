@@ -1,6 +1,32 @@
+* {
+    margin: 0;
+    border: 0;
+}
+
+.home {display: flex;
+    gap: 79px;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 15px;
+}
+
 .home img {
     width: 387px;
     height: 704px;
-    /* padding-top: 79px; */
     object-fit: cover;
-}
+    cursor: pointer;
+    transition: 0.3s;
+    aspect-ratio: 1;
+    outline: calc(var(--s)/2) solid rgba(0, 0, 0, 0.104);
+    outline-offset: calc(var(--s)/-2);
+    --s: 388px;   /* the size of the image */
+    --b: 8px;     /* the border thickness*/
+    --g: 14px;    /* the gap */
+    --c: #4ECDC4; /* the color */
+    }
+
+img:hover {
+   outline: var(--b) solid var(--c);
+    outline-offset: var(--g);
+   }
+          

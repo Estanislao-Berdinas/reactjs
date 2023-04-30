@@ -5,7 +5,7 @@ import ItemDetailsContainer from './components/ItemDetailsContainer/ItemDetailsC
 import CartContextProvider from './Context/CartContext';
 import Carro from './components/Carro/Carro';
 import Home from './components/Home/Home';
-
+import Footer from './components/Footer/footer';
 
 
 
@@ -25,7 +25,10 @@ function App() {
         <Route path='/detalles/:ProductoId' element={<ItemDetailsContainer />}> </Route>
         <Route path='/Carro' element={<Carro />}> </Route>
       </Routes> 
-            
+
+      <Footer />
+
+
 
     </CartContextProvider>
   );
